@@ -29,7 +29,7 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "curl -fsSL https://deno.land/x/install/install.sh | sh && curl -fsSL https://bun.sh/install | bash"
+        run: "curl -fsSL https://bun.sh/install | bash && bun add @elysiajs/static"
 
       - name: Build step
         run: "bun dev"
@@ -38,7 +38,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "boomtris-boom-tris-46"
-          entrypoint: "src/index.js"
-          root: "."
+          entrypoint: ""
+          root: ""
           
           
